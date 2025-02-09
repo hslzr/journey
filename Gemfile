@@ -3,7 +3,6 @@ source "https://rubygems.org"
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false
 gem "importmap-rails"
-gem "jbuilder"
 gem "kamal", require: false
 gem "marksmith"
 gem "propshaft"
