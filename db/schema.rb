@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_09_175159) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_09_182730) do
   create_table "entries", id: :string, force: :cascade do |t|
     t.text "title"
     t.text "content"
     t.text "md5_checksum"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status", default: "draft"
   end
 end
