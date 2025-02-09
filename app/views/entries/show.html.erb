@@ -1,17 +1,26 @@
-<% content_for :title, "Showing entry" %>
+<% content_for :title, @entry.title %>
 
 <div class="md:w-2/3 w-full">
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <h1 class="font-bold text-4xl">Showing entry</h1>
+  <div class="mb-4">
+    <%= link_to "< Back", entries_path, class: "underline" %>
+  </div>
 
   <%= render @entry %>
 
-  <%= link_to "Edit this entry", edit_entry_path(@entry), class: "mt-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
-  <%= link_to "Back to entries", entries_path, class: "ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
+  <%= link_to edit_entry_path(@entry), class: "mt-2 bg-black inline-block border-brutal-radius" do %>
+    <span class="bg-white font-bold block border-brutal-radius border-2 border-black px-4 py-1.5 hover:-translate-y-1 hover:-translate-x-1 transition-all">
+    Edit
+    </span>
+  <% end %>
   <div class="inline-block ml-2">
-    <%= button_to "Destroy this entry", @entry, method: :delete, class: "mt-2 rounded-md px-3.5 py-2.5 text-white bg-red-600 hover:bg-red-500 font-medium" %>
+    <%= button_to @entry, method: :delete, class: "mt-2 bg-black inline-block border-brutal-radius" do %>
+      <span class="bg-red-600 font-bold text-white block border-brutal-radius border-2 border-black py-1.5 px-4 hover:-translate-x-1 hover:-translate-y-1 transition-all">
+      Delete
+      </span>
+    <% end %>
   </div>
 </div>

@@ -1,9 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+  /* Colors */
+  --color-brutal: rgb(246, 246, 246);
+}
+
+.border-brutal-radius {
+  @apply rounded-tr-xl rounded-bl-xl rounded-tl-md rounded-br-md;
+}
+
 .entry-display {
-  @apply bg-gray-100;
   h1 {
-    @apply text-2xl font-bold;
+    @apply text-3xl font-bold;
   }
   h2 {
     @apply text-xl font-bold;

@@ -1,4 +1,9 @@
-<div class="entry-display" id="<%= dom_id entry %>">
-  <h1><%= entry.title %></h1>
-  <%== marksmithed entry.content %>
+<div id="<%= dom_id(entry) %>" class="mb-6">
+  <h1 class="text-4xl font-black mb-4"><%= entry.title %></h1>
+  
+  <div 
+    id="<%= dom_id entry %>"
+    class="entry-display bg-white border-2 border-black p-4 border-brutal-radius">
+    <%== marksmithed entry.content %>
+  </div>
 </div>

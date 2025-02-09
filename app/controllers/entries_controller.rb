@@ -8,6 +8,7 @@ class EntriesController < ApplicationController
 
   # GET /entries/1 or /entries/1.json
   def show
+    fresh_when @entry
   end
 
   # GET /entries/new
@@ -17,6 +18,7 @@ class EntriesController < ApplicationController
 
   # GET /entries/1/edit
   def edit
+    fresh_when @entry
   end
 
   # POST /entries or /entries.json
