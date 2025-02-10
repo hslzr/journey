@@ -7,7 +7,7 @@ class Entry < ApplicationRecord
   enum :status, { draft: "draft", published: "published" }
 
   def content_for_preview
-    content.split("\n").first.gsub(/[#`\*_]/, '').strip
+    content.split("\n").first.gsub(/[#`\*_]/, "").strip
   end
 
   private
