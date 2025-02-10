@@ -12,15 +12,21 @@
   <% end %>
 
   <div>
-    <%= form.label :title, class: "block text-sm font-medium text-gray-700" %>
-    <%= form.text_field :title, class: "rounded-md px-3.5 py-2.5 border border-gray-300 w-full mt-1" %>
+    <%= form.label :title, class: "block text-sm font-semibold black uppercase" %>
+    <div class="border-brutal-radius bg-black block">
+      <%= form.text_field :title, class: "bg-white rounded-md px-3.5 py-2.5 border-2 border-black border-brutal-radius focus:outline-0 w-full mt-1 -translate-x-1 -translate-y-1 block" %>
+    </div>
+  </div>
+
+  <div class="mt-4 border-brutal-radius block bg-black">
+    <span class="block bg-white border-2 border-black border-brutal-radius -translate-x-1 -translate-y-2">
+      <%= form.marksmith :content, class: "border-brutal-radius border-0", enable_file_uploads: false %>
+    </span>
   </div>
 
   <div class="mt-4">
-    <%= form.marksmith :content %>
-  </div>
-
-  <div class="inline">
-    <%= form.submit class: "rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
+    <div class="border-brutal-radius bg-black inline-block">
+      <%= form.submit class:"block px-3 py-2 bg-blue-600 border-brutal-radius border-black border-2 -translate-x-1 -translate-y-1 hover:-translate-y-2 transition-all cursor-pointer text-white" %>
+    </div>
   </div>
 <% end %>
