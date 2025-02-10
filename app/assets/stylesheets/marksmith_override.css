@@ -1,0 +1,6 @@
+.marksmith {
+  border: none;
+  div:first-child {
+    border-top-right-radius: .75rem;
+  }
+}

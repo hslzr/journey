@@ -11,21 +11,30 @@
 
 .entry-display {
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-3xl font-bold my-4;
   }
   h2 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold my-4;
   }
   h3 {
-    @apply text-lg font-bold;
+    @apply text-lg font-bold my-4;
   }
   h4 {
-    @apply text-base font-bold;
+    @apply text-base font-bold my-4;
   }
   h5 {
-    @apply text-sm font-bold;
+    @apply text-sm font-bold my-4;
   }
   h6 {
-    @apply text-xs font-bold;
+    @apply text-xs font-bold my-4;
+  }
+  ul {
+    @apply list-disc list-inside;
+  }
+  ol {
+    @apply list-decimal list-inside;
+  }
+  p {
+    @apply text-base leading-relaxed my-4;
   }
 }
