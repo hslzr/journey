@@ -1,5 +1,6 @@
 .marksmith {
   border: none;
+  /* Needed to get rid of a simple but very annoying border overlap */
   div:first-child {
     border-top-right-radius: .75rem;
   }
