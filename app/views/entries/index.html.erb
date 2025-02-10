@@ -7,18 +7,24 @@
 
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Entries</h1>
-    <%= link_to "New entry", new_entry_path, class: "rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white block font-medium" %>
+    <%= link_to new_entry_path, class: "bg-black border-brutal-radius" do %>
+      <span class="bg-blue-600 text-white block font-semibold border-2 border-black border-brutal-radius px-3 py-2 hover:-translate-x-1 hover:-translate-y-1 transition-all">
+      New Entry
+      </span>
+    <% end %>
   </div>
 
-  <div id="entries" class="min-w-full">
+  <div id="entries" class="min-w-full gap-y-4 flex flex-col mt-6">
     <% if @entries.any? %>
       <% @entries.each do |entry| %>
-        <div id="<%= dom_id entry %>" class="border-b border-gray-200 py-5">
-          <h1 class="font-bold text-2xl"><%= entry.title %></h1>
-          <p class="mt-2"><%= entry.content_for_preview %></p>
-          <p>
-            <%= link_to "Show this entry", entry, class: "ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
-          </p>
+        <div id="<%= dom_id entry %>" class="border-brutal-radius bg-black">
+          <span class="bg-white border-2 border-black border-brutal-radius -translate-x-1 -translate-y-1 block px-4 py-2">
+            <h1 class="font-bold text-2xl"><%= entry.title %></h1>
+            <p class="mt-2 mb-2 italic text-gray-800"><%= entry.content_for_preview %></p>
+            <p>
+              <%= link_to "Show this entry", entry, class: "py-1 font-semibold" %>
+            </p>
+          </span>
         </div>
       <% end %>
     <% else %>
