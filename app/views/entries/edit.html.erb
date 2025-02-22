@@ -5,10 +5,10 @@
     <h1 class="font-bold text-4xl">Editing entry</h1>
     <div class="flex gap-x-4">
       <%= link_to @entry do %>
-        <%= render Widgets::ButtonComponent.new(text: "Show this entry") %>
+        <%= render Widgets::PlainButtonComponent.new(text: "Show this entry") %>
       <% end %>
       <%= link_to entries_path do %>
-        <%= render Widgets::ButtonComponent.new(text: "Back to entries") %>
+        <%= render Widgets::PlainButtonComponent.new(text: "Back to entries") %>
       <% end %>
     </div>
   </div>

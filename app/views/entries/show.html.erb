@@ -6,7 +6,9 @@
   <% end %>
 
   <div class="mb-4">
-    <%= link_to "< Back", entries_path, class: "underline" %>
+    <%= link_to entries_path do %>
+      <%= render Widgets::PlainButtonComponent.new(text: "< Back") %>
+    <% end %>
   </div>
 
   <%= render @entry %>
