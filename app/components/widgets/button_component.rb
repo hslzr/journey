@@ -4,7 +4,7 @@ class Widgets::ButtonComponent < ViewComponent::Base
 
   erb_template <<-ERB
     <button class="bg-black inline-block border-brutal-radius">
-      <span class="<%= bg_color %> <%= text_color %> font-bold block border-brutal-radius border-2 border-black px-4 py-1.5 -translate-x-1 -translate-y-1 hover:-translate-y-2 active:translate-y-0 active:translate-x-0 transition-all">
+      <span class="<%= button_classes %>">
         <%= @text %>
       </span>
     </button>
@@ -18,6 +18,17 @@ class Widgets::ButtonComponent < ViewComponent::Base
   end
 
   private
+
+  def button_classes
+    "%{bg_color} %{text_color}
+      font-bold block border-brutal-radius
+      border-2 border-black px-4 py-1.5
+      -translate-x-1 -translate-y-1
+      hover:-translate-y-2
+      active:translate-y-0 active:translate-x-0
+      transition-all
+    ".squish % { bg_color: bg_color, text_color: text_color }
+  end
 
   def bg_color
     case @variant

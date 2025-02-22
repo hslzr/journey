@@ -14,17 +14,17 @@
   <div>
     <%= form.label :title, class: "block text-sm font-semibold black uppercase" %>
     <div class="border-brutal-radius bg-black block">
-      <%= form.text_field :title, class: "bg-white rounded-md px-3.5 py-2.5 border-2 border-black border-brutal-radius focus:outline-0 w-full mt-1 -translate-x-1 -translate-y-1 block" %>
+      <%= form.text_field :title, class: "bg-white rounded-md px-4 py-3 border-2 border-black border-brutal-radius focus:outline-0 w-full mt-1 -translate-x-1 -translate-y-1 block" %>
     </div>
   </div>
 
-  <div class="mt-4 border-brutal-radius block bg-black">
+  <div class="mt-6 border-brutal-radius block bg-black">
     <span class="block bg-white border-2 border-black border-brutal-radius -translate-x-1 -translate-y-2">
       <%= form.marksmith :content, class: "border-brutal-radius border-0", enable_file_uploads: false %>
     </span>
   </div>
 
-  <div class="mt-4">
+  <div class="my-4">
     <%= render Widgets::ButtonComponent.new(text: "Save", type: "submit", variant: :primary) %>
   </div>
 <% end %>
