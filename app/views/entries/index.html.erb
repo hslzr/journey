@@ -7,10 +7,9 @@
 
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Entries</h1>
-    <%= link_to new_entry_path, class: "bg-black border-brutal-radius" do %>
-      <span class="bg-blue-600 text-white block font-semibold border-2 border-black border-brutal-radius px-3 py-2 hover:-translate-x-1 hover:-translate-y-1 transition-all">
-      New Entry
-      </span>
+
+    <%= link_to new_entry_path do %>
+      <%= render Widgets::ButtonComponent.new(text: "New Entry", variant: :primary) %>
     <% end %>
   </div>
 
