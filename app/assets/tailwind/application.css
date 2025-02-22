@@ -37,4 +37,7 @@
   p {
     @apply text-base leading-relaxed my-4;
   }
+  blockquote {
+    @apply p-4 my-4 bg-zinc-100;
+  }
 }
