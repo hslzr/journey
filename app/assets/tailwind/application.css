@@ -40,4 +40,7 @@
   blockquote {
     @apply p-4 my-4 bg-zinc-100;
   }
+  code {
+    @apply bg-zinc-100 p-1;
+  }
 }
