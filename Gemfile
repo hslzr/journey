@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false
+# Marksmith's parser
+gem "commonmarker"
 gem "importmap-rails"
 gem "kamal", require: false
 gem "marksmith"
