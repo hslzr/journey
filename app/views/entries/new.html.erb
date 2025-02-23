@@ -4,7 +4,9 @@
   <div class="flex justify-between">
     <h1 class="font-bold text-4xl mb-6">New entry</h1>
     <%= link_to entries_path do %>
-      <%= render Widgets::PlainButtonComponent.new(text: "Back to entries") %>
+      <%= render Widgets::PlainButtonComponent.new do %>
+        Back to entries
+      <% end %>
     <% end %>
   </div>
 

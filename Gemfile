@@ -6,6 +6,7 @@ gem "bootsnap", require: false
 gem "commonmarker"
 gem "importmap-rails"
 gem "kamal", require: false
+gem "lucide-rails", "~> 0.5.1"
 gem "marksmith"
 gem "propshaft"
 gem "puma", ">= 5.0"

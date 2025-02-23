@@ -3,12 +3,13 @@
 class Widgets::PlainButtonComponent < ViewComponent::Base
   erb_template <<-ERB
     <button class="<%= button_classes %>">
-      <%= @text %>
+      <div class="flex flex-row items-center">
+        <%= content %>
+      </div>
     </button>
   ERB
 
-  def initialize(text:, variant: :base, **options)
-    @text = text
+  def initialize(variant: :base, **options)
     @variant = variant
     @options = options
   end
@@ -17,7 +18,7 @@ class Widgets::PlainButtonComponent < ViewComponent::Base
 
   def button_classes
     "
-      inline-block font-black text-black p-2 border-0 cursor-pointer bg-transparent
+      font-black text-black p-2 border-0 cursor-pointer bg-transparent
       %{text_color} border-b-2 border-transparent
       transition-all duration-300 ease-in-out
       hover:border-black
