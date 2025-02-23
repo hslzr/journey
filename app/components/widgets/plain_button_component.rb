@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Widgets::PlainButtonComponent < ViewComponent::Base
-
   erb_template <<-ERB
     <button class="<%= button_classes %>">
       <%= @text %>

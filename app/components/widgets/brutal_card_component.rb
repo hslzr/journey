@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Widgets::BrutalCardComponent < ViewComponent::Base
-
   erb_template <<-ERB
     <div class="border-brutal-radius <%= shadow_bg_color %>">
       <span class="<%= bg_color %> <%= text_color %> border-2 <%= border_color %> border-brutal-radius -translate-x-1 -translate-y-1 block px-4 py-2">
