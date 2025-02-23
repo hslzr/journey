@@ -16,15 +16,13 @@
   <div id="entries" class="min-w-full gap-y-4 flex flex-col mt-6">
     <% if @entries.any? %>
       <% @entries.each do |entry| %>
-        <div id="<%= dom_id entry %>" class="border-brutal-radius bg-black">
-          <span class="bg-white border-2 border-black border-brutal-radius -translate-x-1 -translate-y-1 block px-4 py-2">
-            <h1 class="font-bold text-2xl"><%= entry.title %></h1>
-            <p class="mt-2 mb-2 italic text-gray-800"><%= entry.content_for_preview %></p>
-            <p>
-              <%= link_to "Show this entry", entry, class: "py-1 font-semibold" %>
-            </p>
-          </span>
-        </div>
+        <%= render Widgets::BrutalCardComponent.new do %>
+          <h1 class="font-bold text-2xl"><%= entry.title %></h1>
+          <p class="mt-2 mb-2 italic text-gray-800"><%= entry.content_for_preview %></p>
+          <p>
+            <%= link_to "Show this entry", entry, class: "py-1 font-semibold" %>
+          </p>
+        <% end %>
       <% end %>
     <% else %>
       <p class="text-center my-10">No entries found.</p>
