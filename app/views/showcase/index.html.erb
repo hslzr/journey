@@ -1,0 +1,9 @@
+<div class="container mx-auto grid grid-cols-3 gap-4">
+  <% @variants.each do |variant| %>
+    <% @sizes.each do |size| %>
+      <div>
+        <%= render Widgets::ButtonComponent.new(variant: variant, size: size, text: "#{size} #{variant}") %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

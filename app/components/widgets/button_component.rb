@@ -10,24 +10,26 @@ class Widgets::ButtonComponent < ViewComponent::Base
     </button>
   ERB
 
-  def initialize(text: 'Button', type: "Button", variant: :base, **options)
+  def initialize(text: 'Button', type: "Button", variant: :base, size: :md, **options)
     @text = text
     @type = type
     @variant = variant
+    @size = size
     @options = options
   end
 
   private
 
   def button_classes
-    "%{bg_color} %{text_color}
-      font-bold block border-brutal-radius
-      border-2 border-black px-4 py-1.5
+    "#{bg_color} #{text_color}
+      block border-brutal-radius
+      border-2 border-black
+      #{size_classes}
       -translate-x-1 -translate-y-1
       hover:-translate-y-2
       active:translate-y-0 active:translate-x-0
       transition-all
-    ".squish % { bg_color: bg_color, text_color: text_color }
+    ".squish
   end
 
   def bg_color
@@ -36,8 +38,12 @@ class Widgets::ButtonComponent < ViewComponent::Base
       'bg-white'
     when :primary
       'bg-blue-600'
+    when :secondary
+      'bg-violet-500'
+    when :success
+      'bg-emerald-600'
     when :danger
-      'bg-red-600'
+      'bg-rose-700'
     end
   end
 
@@ -46,9 +52,24 @@ class Widgets::ButtonComponent < ViewComponent::Base
     when :base
       'text-black'
     when :primary
-      'text-white'
+      'text-blue-50'
+    when :secondary
+      "text-violet-50"
+    when :success
+      'text-emerald-50'
     when :danger
-      'text-white'
+      'text-red-50'
+    end
+  end
+
+  def size_classes
+    case @size
+    when :sm
+      'text-sm px-2.5 py-1 font-semibold'
+    when :md
+      'text-base px-3.5 py-1.5 font-bold'
+    when :lg
+      'text-lg px-4 py-2 font-bold'
     end
   end
 end
