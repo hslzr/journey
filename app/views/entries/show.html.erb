@@ -20,7 +20,7 @@
     <%= render Widgets::ButtonComponent.new(text: "Edit") %>
   <% end %>
   <div class="inline-block ml-2">
-    <%= button_to @entry, method: :delete do %>
+    <%= button_to @entry, method: :delete, form: { data: { turbo_confirm: "Are you sure?" } } do %>
       <%= render Widgets::ButtonComponent.new(text: "Delete", variant: :danger) %>
     <% end %>
   </div>
