@@ -2,7 +2,7 @@
 
 This is a simple "journaling" app built with the sole purpose of testing the
 [marksmith gem](https://github.com/avo-hq/marksmith). It's a simple Rails app
-built with Rails 8.0.1, Ruby 3.4.1 and SQLite as a database.
+built with Rails 8.0.2, Ruby 3.4.2 and SQLite as a database.
 
 ## Installation
 
